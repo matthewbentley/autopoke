@@ -15,7 +15,6 @@ if __name__ == '__main__':
     assert "Forgot password?" not in driver.page_source
 
     c = 0
-    c2 = 0
     while True:
         try:
             for i in driver.find_elements_by_link_text("Poke Back"):
@@ -23,6 +22,7 @@ if __name__ == '__main__':
                 c += 1
                 print("Clicked so far: " + str(c))
         except StaleElementReferenceException:
+            print("Found exception, reloading page")
             driver.get('https://facebook.com/pokes/')
 
         sleep(0.5)
