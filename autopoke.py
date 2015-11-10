@@ -25,4 +25,4 @@ if __name__ == '__main__':
         except StaleElementReferenceException:
             driver.get('https://facebook.com/pokes/')
 
-        sleep(1)
+        sleep(0.5)
