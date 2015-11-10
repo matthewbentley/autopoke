@@ -20,7 +20,7 @@ if __name__ == '__main__':
             for i in driver.find_elements_by_link_text("Poke Back"):
                 i.click()
                 c += 1
-                print("Clicked so far: " + str(c))
+                if c % 10 == 0: print("Clicked so far: " + str(c))
         except StaleElementReferenceException:
             print("Found exception, reloading page")
             driver.get('https://facebook.com/pokes/')
