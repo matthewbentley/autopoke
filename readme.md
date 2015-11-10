@@ -1,6 +1,7 @@
 # Facebook auto-poker
 
-Requires [PhantomJS](http://phantomjs.org/)
+Requires [PhantomJS](http://phantomjs.org/) version 2.0 or later.  This means 
+you will have to compile from source on Ubuntu
 
 Install from requirements.txt (only requires selenium)
 
