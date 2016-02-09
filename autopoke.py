@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.common.exceptions import StaleElementReferenceException
 from time import sleep
 from getpass import getpass
+from random import randint
 
 
 if __name__ == '__main__':
@@ -19,6 +20,7 @@ if __name__ == '__main__':
     while True:
         try:
             for i in driver.find_elements_by_link_text("Poke Back"):
+                sleep(randint(3,300))
                 i.click()
                 c += 1
                 print("Clicked so far: " + str(c))
